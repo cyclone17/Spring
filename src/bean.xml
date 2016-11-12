@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <bean id="office" class="test.office">
+    <property name="officeId" >
+    	<value>001</value>
+    </property>
+    </bean> 
+    <bean id="car" class="test.car">
+    <property name="carId" >
+    	<value>001</value>
+    </property>
+    <property name="carColor" >
+    	<value>red</value>
+    </property>
+    </bean>
+     <bean id="boss" class="test.boss">
+    <property name="car" >
+    <ref bean="car" />  
+     </property>
+    <property name="office">
+    <ref bean="office" />  
+    </property>
+    </bean>
+</beans>
